@@ -76,6 +76,5 @@ package-lock.json
 # Source files
 src/
 
-# Test and Test Utils Files
+# Test files
 build/*/test/
-build/utils/
