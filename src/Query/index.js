@@ -36,9 +36,9 @@ import { Loading, NotFound } from '../';
  * <Query
  *    className={ className }
  *    Component={ Loop }
+ *    doRender
  *    havePosts={ havePosts }
  *    isLoading={ isLoading }
- *    shouldRender
  *    query={ slicedQuery }
  * />
  */
@@ -48,6 +48,7 @@ function Query( { Component, havePosts, isLoading, otherLoadingProps, otherNotFo
 
 Query.propTypes = {
 	Component: PropTypes.element,
+	doRender: PropTypes.bool,
 	havePosts: PropTypes.bool,
 	isLoading: PropTypes.bool,
 	otherLoadingProps: PropTypes.object,
@@ -56,10 +57,11 @@ Query.propTypes = {
 
 Query.defaultProps = {
 	Component: undefined,
+	doRender: true,
 	havePosts: false,
 	isLoading: true,
 	otherLoadingProps: {},
 	otherNotFoundProps: {},
 };
 
-export default ifCondition( ( { shouldRender } ) => Boolean( shouldRender ) )( Query );
+export default ifCondition( ( { doRender } ) => Boolean( doRender ) )( Query );

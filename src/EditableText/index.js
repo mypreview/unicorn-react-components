@@ -41,9 +41,9 @@ import { Constants } from '../utils';
  *
  * <EditableText
  *    className={ `${ className }__title` }
+ *	  doRender={ elements?.title }
  *	  onChange={ ( value ) => setAttributes( { title: value } ) }
  *	  placeholder={ __( 'Title…' ) }
- *	  shouldRender={ elements?.title }
  *    tagName="h3"
  *	  value={ title }
  * />
@@ -72,6 +72,7 @@ function EditableText( { className, isSave, onChange, onFocus, value, ...otherPr
 
 EditableText.propTypes = {
 	className: PropTypes.string,
+	doRender: PropTypes.bool,
 	isSave: PropTypes.bool,
 	onChange: PropTypes.func,
 	onFocus: PropTypes.func,
@@ -80,11 +81,11 @@ EditableText.propTypes = {
 
 EditableText.defaultProps = {
 	className: undefined,
+	doRender: true,
 	isSave: false,
 	onChange: () => {},
 	onFocus: () => {},
-	shouldRender: true,
 	value: undefined,
 };
 
-export default ifCondition( ( { shouldRender } ) => Boolean( shouldRender ) )( EditableText );
+export default ifCondition( ( { doRender } ) => Boolean( doRender ) )( EditableText );
