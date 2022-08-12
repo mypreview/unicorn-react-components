@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset='utf-8'>
-  <title>@mypreview/unicorn-react-components 1.0.0 | Documentation</title>
+  <title>@mypreview/unicorn-react-components 1.2.0 | Documentation</title>
   <meta name='description' content='A collection of most used React components crafted for WordPress projects.'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' rel='stylesheet'>
@@ -15,7 +15,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>@mypreview/unicorn-react-components</h3>
-          <div class='mb1'><code>1.0.0</code></div>
+          <div class='mb1'><code>1.2.0</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -26,6 +26,16 @@
             type='text' />
           <div id='toc'>
             <ul class='list-reset h5 py1-ul'>
+              
+                
+                <li><a
+                  href='#addbutton'
+                  class="">
+                  AddButton
+                  
+                </a>
+                
+                </li>
               
                 
                 <li><a
@@ -42,6 +52,26 @@
                   href='#editabletext'
                   class="">
                   EditableText
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#errormessage'
+                  class="">
+                  ErrorMessage
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#htmlattrs'
+                  class="">
+                  HtmlAttrs
                   
                 </a>
                 
@@ -99,9 +129,39 @@
               
                 
                 <li><a
-                  href='#constants'
+                  href='#termstreeselect'
                   class="">
-                  constants
+                  TermsTreeSelect
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#querycontrols'
+                  class="">
+                  QueryControls
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#removebutton'
+                  class="">
+                  RemoveButton
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#sortable'
+                  class="">
+                  Sortable
                   
                 </a>
                 
@@ -122,12 +182,138 @@
   
   <div class='clearfix'>
     
+    <h3 class='fl m0' id='addbutton'>
+      AddButton
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/e3a364f88bb9ceebccbbc8ce72c24abbd1e0cc0b/src/AddButton/index.js#L41-L47'>
+      <span>src/AddButton/index.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>A wrapper component around the "Button" component provided by the core.</p>
+<p>This component has been created to represent adding items into a list
+with consideration for ease of styling and following D.R.Y principles.</p>
+
+    <div class='pre p1 fill-light mt0'>AddButton(props: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): JSX.Element</div>
+  
+  
+
+  
+  
+  
+  
+  
+  <div>Since: 1.2.0</div>
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>props</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    Component properties.
+
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.children</span> <code class='quiet'>JSX.Element</code>
+  </td>
+  <td class='break-word'><span>Any React element or elements can be passed as children. They will be rendered within the wrapper.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.onClick</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>
+  </td>
+  <td class='break-word'><span>Callback function for processing click events on the button component.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.otherProps</span> <code class='quiet'>...any</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>JSX.Element</code>:
+        Component to render.
+
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>&lt;AddButton onClick={ handleOnClickAdd } /&gt;</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
     <h3 class='fl m0' id='conditionalwrap'>
       ConditionalWrap
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/f9875aa8bb6618a9dd87c3758824cd7d58515f00/src/ConditionalWrap/index.js#L38-L40'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/e3a364f88bb9ceebccbbc8ce72c24abbd1e0cc0b/src/ConditionalWrap/index.js#L38-L40'>
       <span>src/ConditionalWrap/index.js</span>
       </a>
     
@@ -261,7 +447,7 @@ wrap={ <span class="hljs-function">(<span class="hljs-params"> children </span>)
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/f9875aa8bb6618a9dd87c3758824cd7d58515f00/src/EditableText/index.js#L51-L71'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/e3a364f88bb9ceebccbbc8ce72c24abbd1e0cc0b/src/EditableText/index.js#L51-L71'>
       <span>src/EditableText/index.js</span>
       </a>
     
@@ -391,12 +577,300 @@ linked, or use other formatting.</p>
       
       <pre class='p1 overflow-auto round fill-light'>&lt;EditableText
    className={ <span class="hljs-string">`<span class="hljs-subst">${ className }</span>__title`</span> }
+  doRender={ elements?.title }
   onChange={ <span class="hljs-function">(<span class="hljs-params"> value </span>) =&gt;</span> setAttributes( { <span class="hljs-attr">title</span>: value } ) }
   placeholder={ __( <span class="hljs-string">&#x27;Title…&#x27;</span> ) }
-  shouldRender={ elements?.title }
    tagName=<span class="hljs-string">&quot;h3&quot;</span>
   value={ title }
 /&gt;</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='errormessage'>
+      ErrorMessage
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/e3a364f88bb9ceebccbbc8ce72c24abbd1e0cc0b/src/ErrorMessage/index.js#L38-L44'>
+      <span>src/ErrorMessage/index.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>A wrapper around the WordPress Notice component
+to allow displaying error messages when appropriate.</p>
+
+    <div class='pre p1 fill-light mt0'>ErrorMessage(props: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): JSX.Element</div>
+  
+  
+
+  
+  
+  
+  
+  
+  <div>Since: 1.2.0</div>
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>props</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    Component properties.
+
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.children</span> <code class='quiet'>JSX.Element</code>
+  </td>
+  <td class='break-word'><span>Components to be rendered as content.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.otherProps</span> <code class='quiet'>...any</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>JSX.Element</code>:
+        Component to render.
+
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>&lt;ErrorMessage&gt;
+    __( <span class="hljs-string">&#x27;Entered address is not a valid email address!&#x27;</span> )
+&lt;/ErrorMessage&gt;</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='htmlattrs'>
+      HtmlAttrs
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/e3a364f88bb9ceebccbbc8ce72c24abbd1e0cc0b/src/HtmlAttrs/index.js#L49-L100'>
+      <span>src/HtmlAttrs/index.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>The "HtmlAttrs" component allows creating a set of HTML attributes
+to be added to the wrapper tag of another block instance.</p>
+
+    <div class='pre p1 fill-light mt0'>HtmlAttrs(props: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): JSX.Element</div>
+  
+  
+
+  
+  
+  
+  
+  
+  <div>Since: 1.2.0</div>
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>props</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    Component properties.
+
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.instanceId</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>Reference to the Component to render.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.onChange</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>
+  </td>
+  <td class='break-word'><span>Whether the query items are being fetched at the moment.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.otherAddButtonProps</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>
+  </td>
+  <td class='break-word'><span>Additional properties passed to the "AddButton" component.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.otherNameProps</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>
+  </td>
+  <td class='break-word'><span>Additional properties passed to the "TextInput -> Name (Key)" field.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.otherRemoveButtonProps</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>
+  </td>
+  <td class='break-word'><span>Additional properties passed to the "TextInput -> Value" field.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.otherValueProps</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>
+  </td>
+  <td class='break-word'><span>Additional properties passed to the "RemoveButton" component.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.value</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>The current width of the field/element.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.otherProps</span> <code class='quiet'>...any</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>JSX.Element</code>:
+        Component to render.
+
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>&lt;HtmlAttrs onChange={ <span class="hljs-function">(<span class="hljs-params"> value </span>) =&gt;</span> setAttributes( { <span class="hljs-attr">attrs</span>: value } ) } value={ attrs } /&gt;</pre>
     
   
 
@@ -422,7 +896,7 @@ linked, or use other formatting.</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/f9875aa8bb6618a9dd87c3758824cd7d58515f00/src/InnerHTML/index.js#L33-L40'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/e3a364f88bb9ceebccbbc8ce72c24abbd1e0cc0b/src/InnerHTML/index.js#L33-L40'>
       <span>src/InnerHTML/index.js</span>
       </a>
     
@@ -550,7 +1024,7 @@ aside from <code>children</code> are passed.</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/f9875aa8bb6618a9dd87c3758824cd7d58515f00/src/Loading/index.js#L34-L43'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/e3a364f88bb9ceebccbbc8ce72c24abbd1e0cc0b/src/Loading/index.js#L34-L43'>
       <span>src/Loading/index.js</span>
       </a>
     
@@ -665,7 +1139,7 @@ aside from <code>children</code> are passed.</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/f9875aa8bb6618a9dd87c3758824cd7d58515f00/src/Media/index.js#L46-L67'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/e3a364f88bb9ceebccbbc8ce72c24abbd1e0cc0b/src/Media/index.js#L46-L67'>
       <span>src/Media/index.js</span>
       </a>
     
@@ -822,7 +1296,7 @@ on the media type being stored within the block attributes.</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/f9875aa8bb6618a9dd87c3758824cd7d58515f00/src/NotFound/index.js#L38-L44'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/e3a364f88bb9ceebccbbc8ce72c24abbd1e0cc0b/src/NotFound/index.js#L38-L44'>
       <span>src/NotFound/index.js</span>
       </a>
     
@@ -948,7 +1422,7 @@ on the media type being stored within the block attributes.</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/f9875aa8bb6618a9dd87c3758824cd7d58515f00/src/Query/index.js#L45-L47'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/e3a364f88bb9ceebccbbc8ce72c24abbd1e0cc0b/src/Query/index.js#L45-L47'>
       <span>src/Query/index.js</span>
       </a>
     
@@ -1076,9 +1550,9 @@ on the media type being stored within the block attributes.</p>
       <pre class='p1 overflow-auto round fill-light'>&lt;Query
    className={ className }
    Component={ Loop }
+   doRender
    havePosts={ havePosts }
    isLoading={ isLoading }
-   shouldRender
    query={ slicedQuery }
 /&gt;</pre>
     
@@ -1101,35 +1575,144 @@ on the media type being stored within the block attributes.</p>
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='constants'>
-      constants
+    <h3 class='fl m0' id='termstreeselect'>
+      TermsTreeSelect
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/f9875aa8bb6618a9dd87c3758824cd7d58515f00/src/utils/constants.js#L6-L10'>
-      <span>src/utils/constants.js</span>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/e3a364f88bb9ceebccbbc8ce72c24abbd1e0cc0b/src/TermsTreeSelect/index.js#L42-L68'>
+      <span>src/TermsTreeSelect/index.js</span>
       </a>
     
   </div>
   
 
-  <p>The object exported from this file has been determined to be frozen mainly
-to prevent new properties from being added to it, existing properties from
-being removed, and avoid the values of existing properties from being changed.</p>
+  <p>Renders a component is used to generate select input fields with
+interface to select the parent page/term in a hierarchy of pages/terms.</p>
 
-    <div class='pre p1 fill-light mt0'>constants</div>
-  
-  
-
-  
-  
-  
-  
+    <div class='pre p1 fill-light mt0'>TermsTreeSelect(props: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): JSX.Element</div>
   
   
 
   
+  
+  
+  
+  
+  <div>Since: 1.1.0</div>
 
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>props</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    Component properties.
+
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.label</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>Label property as the content.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.noOptionLabel</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>Label to represent empty selection.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.onChange</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>
+  </td>
+  <td class='break-word'><span>Function that receives the value of the input.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.taxonomy</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>Taxonomy name that the term is part of.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.value</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>Link object value for the button component.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.otherProps</span> <code class='quiet'>...any</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>JSX.Element</code>:
+        Component to render.
+
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>&lt;TermsTreeSelect
+   label={ { __( <span class="hljs-string">&#x27;Category&#x27;</span> ) } }
+  onChange={ <span class="hljs-function">(<span class="hljs-params"> value </span>) =&gt;</span> setAttributes( { <span class="hljs-attr">categories</span>: value } ) }
+  taxonomy={ <span class="hljs-string">&#x27;categories&#x27;</span> }
+   value={ <span class="hljs-string">&#x27;12&#x27;</span> }
+/&gt;</pre>
+    
   
 
   
@@ -1138,6 +1721,505 @@ being removed, and avoid the values of existing properties from being changed.</
 
   
 
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='querycontrols'>
+      QueryControls
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/e3a364f88bb9ceebccbbc8ce72c24abbd1e0cc0b/src/QueryControls/index.js#L58-L115'>
+      <span>src/QueryControls/index.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Helper component to adjust arguments to query (retrieve) posts.</p>
+
+    <div class='pre p1 fill-light mt0'>QueryControls(props: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): JSX.Element</div>
+  
+  
+
+  
+  
+  
+  
+  
+  <div>Since: 1.1.0</div>
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>props</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    Component properties.
+
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.maxItems</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  </td>
+  <td class='break-word'><span>Maximum number of items.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.minItems</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  </td>
+  <td class='break-word'><span>Minimum number of items.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.numberOfItems</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  </td>
+  <td class='break-word'><span>The selected number of items to retrieve via the query.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.onNumberOfItemsChange</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>
+  </td>
+  <td class='break-word'><span>A function that receives the new number of items value.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.onOrderChange</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>
+  </td>
+  <td class='break-word'><span>A function that receives the new order value.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.onOrderByChange</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>
+  </td>
+  <td class='break-word'><span>A function that receives the new orderby value.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.onTermChange</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>
+  </td>
+  <td class='break-word'><span>A function that receives the new term (category) value.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.order</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>The order in which to retrieve posts.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.orderBy</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>The meta key by which to order posts.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.otherOrderProps</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>
+  </td>
+  <td class='break-word'><span>Additional properties to be added to the "Order" control.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.otherTermsTreeSelectProps</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>
+  </td>
+  <td class='break-word'><span>Additional properties to be added to the "Term" dropdown control.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.otherNumberOfItemsProps</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>
+  </td>
+  <td class='break-word'><span>Additional properties to be added to the "Number of items" (Range) control.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.selectedTermId</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>The selected term (category) id.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.taxonomy</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>Taxonomy (term) name.
+</span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>JSX.Element</code>:
+        Component to render.
+
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>&lt;QueryControls
+maxItems={ maxLimit }
+numberOfItems={ limit }
+order={ order }
+orderBy={ orderby }
+onNumberOfItemsChange={ <span class="hljs-function">(<span class="hljs-params"> value </span>) =&gt;</span> setAttributes( { <span class="hljs-attr">limit</span>: value } ) }
+onOrderByChange={ <span class="hljs-function">(<span class="hljs-params"> value </span>) =&gt;</span> setAttributes( { <span class="hljs-attr">orderby</span>: value } ) }
+onOrderChange={ <span class="hljs-function">(<span class="hljs-params"> value </span>) =&gt;</span> setAttributes( { <span class="hljs-attr">order</span>: value } ) }
+/&gt;</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='removebutton'>
+      RemoveButton
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/e3a364f88bb9ceebccbbc8ce72c24abbd1e0cc0b/src/RemoveButton/index.js#L41-L56'>
+      <span>src/RemoveButton/index.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>A wrapper component around the "Button" component provided by the core.</p>
+<p>This component has been created to represent removing items from a list
+with consideration for ease of styling and following D.R.Y principles.</p>
+
+    <div class='pre p1 fill-light mt0'>RemoveButton(props: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): JSX.Element</div>
+  
+  
+
+  
+  
+  
+  
+  
+  <div>Since: 1.2.0</div>
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>props</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    Component properties.
+
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.children</span> <code class='quiet'>JSX.Element</code>
+  </td>
+  <td class='break-word'><span>Any React element or elements can be passed as children. They will be rendered within the wrapper.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.onClick</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>
+  </td>
+  <td class='break-word'><span>Callback function to for processing click events on the button component.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.otherProps</span> <code class='quiet'>...any</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>JSX.Element</code>:
+        Component to render.
+
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>&lt;RemoveButton onClick={ handleOnClickRemove } /&gt;</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='sortable'>
+      Sortable
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/e3a364f88bb9ceebccbbc8ce72c24abbd1e0cc0b/src/Sortable/index.js#L49-L73'>
+      <span>src/Sortable/index.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Sortable component designed to provide the ability to provide a set of higher-order components
+to turn any collection of elements given into an accessible and touch-friendly sortable list.</p>
+
+    <div class='pre p1 fill-light mt0'>Sortable(props: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): JSX.Element</div>
+  
+  
+
+  
+  
+  
+  
+  
+  <div>Since: 1.2.0</div>
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>props</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    Component properties.
+
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.children</span> <code class='quiet'>JSX.Element</code>
+  </td>
+  <td class='break-word'><span>Any React element or elements can be passed as children. They will be rendered within the wrapper.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.instanceId</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>Unique ID of the current component instance.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.onChange</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>
+  </td>
+  <td class='break-word'><span>Callback function to be triggered when the user finishes a sorting gesture.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.withSortableKnob</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+  </td>
+  <td class='break-word'><span>Whether the item should be allowed to only be draggable from a specific (knob) handle.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.otherProps</span> <code class='quiet'>...any</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>JSX.Element</code>:
+        Component to render.
+
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>&lt;Sortable
+    onChange={ <span class="hljs-function">(<span class="hljs-params"> value </span>) =&gt;</span> setAttributes( { <span class="hljs-attr">items</span>: value } ) }
+&gt;
+    { map( items, <span class="hljs-function">(<span class="hljs-params"> { value, label }, index </span>) =&gt;</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Element</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{</span> <span class="hljs-attr">value</span> } <span class="hljs-attr">label</span>=<span class="hljs-string">{</span> <span class="hljs-attr">label</span> } <span class="hljs-attr">value</span>=<span class="hljs-string">{</span> <span class="hljs-attr">value</span> } <span class="hljs-attr">onRemove</span>=<span class="hljs-string">{</span> () =&gt;</span> onRemove( index ) } /&gt;</span>
+   ) ) }
+&lt;/Sortable&gt;</pre>
+    
   
 
   
