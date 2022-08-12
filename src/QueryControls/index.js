@@ -29,7 +29,7 @@ import Constants from './constants';
  * @since 	   1.1.0
  * @param      {Object}         props                              Component properties.
  * @param  	   {number}     	props.maxItems                     Maximum number of items.
- * @param  	   {number}         props.minItems                     Minumum number of items.
+ * @param  	   {number}         props.minItems                     Minimum number of items.
  * @param  	   {number}    	    props.numberOfItems                The selected number of items to retrieve via the query.
  * @param  	   {Function}    	props.onNumberOfItemsChange        A function that receives the new number of items value.
  * @param  	   {Function}    	props.onOrderChange                A function that receives the new order value.
@@ -56,8 +56,8 @@ import Constants from './constants';
  * />
  */
 function QueryControls( {
-	maxItems = Constants.DEFAULT_MAX_ITEMS,
-	minItems = Constants.DEFAULT_MIN_ITEMS,
+	maxItems,
+	minItems,
 	numberOfItems,
 	onNumberOfItemsChange,
 	onOrderChange,

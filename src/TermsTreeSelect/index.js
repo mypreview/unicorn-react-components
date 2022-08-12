@@ -32,36 +32,23 @@ import { __ } from '@wordpress/i18n';
  * @return     {JSX.Element}                       Component to render.
  * @example
  *
- * <TermsSelectControl
+ * <TermsTreeSelect
  *    label={ { __( 'Category' ) } }
  *	  onChange={ ( value ) => setAttributes( { categories: value } ) }
  *	  taxonomy={ 'categories' }
  *    value={ '12' }
  * />
  */
-function TermsTreeSelect( {
-	label,
-	noOptionLabel,
-	onChange,
-	taxonomy,
-	value,
-	...otherProps
-} ) {
+function TermsTreeSelect( { label, noOptionLabel, onChange, taxonomy, value, ...otherProps } ) {
 	const { termsOptions } = useGetTerms( taxonomy );
 	const termsTree = useMemo( () => {
-		const flatTermsWithParentAndChildren = map(
-			termsOptions,
-			( term ) => ( {
-				children: [],
-				parent: null,
-				...term,
-			} )
-		);
+		const flatTermsWithParentAndChildren = map( termsOptions, ( term ) => ( {
+			children: [],
+			parent: null,
+			...term,
+		} ) );
 
-		const termsByParent = groupBy(
-			flatTermsWithParentAndChildren,
-			'parent'
-		);
+		const termsByParent = groupBy( flatTermsWithParentAndChildren, 'parent' );
 		if ( termsByParent.null && termsByParent.null.length ) {
 			return flatTermsWithParentAndChildren;
 		}
@@ -70,24 +57,14 @@ function TermsTreeSelect( {
 				const children = termsByParent[ term.id ];
 				return {
 					...term,
-					children:
-						children && children.length
-							? fillWithChildren( children )
-							: [],
+					children: children && children.length ? fillWithChildren( children ) : [],
 				};
 			} );
 
 		return fillWithChildren( termsByParent[ '0' ] || [] );
 	}, [ termsOptions ] );
 
-	return (
-		<TreeSelect
-			{ ...{ label, noOptionLabel, onChange } }
-			selectedId={ value }
-			tree={ termsTree }
-			{ ...otherProps }
-		/>
-	);
+	return <TreeSelect { ...{ label, noOptionLabel, onChange } } selectedId={ value } tree={ termsTree } { ...otherProps } />;
 }
 
 TermsTreeSelect.propTypes = {
@@ -106,6 +83,4 @@ TermsTreeSelect.defaultProps = {
 	value: undefined,
 };
 
-export default ifCondition( ( { taxonomy } ) => Boolean( taxonomy ) )(
-	TermsTreeSelect
-);
+export default ifCondition( ( { taxonomy } ) => Boolean( taxonomy ) )( TermsTreeSelect );
