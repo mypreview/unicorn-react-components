@@ -51,7 +51,7 @@
 	},
 	"dependencies": {
 		"@mypreview/unicorn-js-utils": "1.1.0",
-		"@mypreview/unicorn-react-hooks": "1.0.1",
+		"@mypreview/unicorn-react-hooks": "1.0.2",
 		"@wordpress/block-editor": "9.7.0",
 		"@wordpress/components": "19.17.0",
 		"@wordpress/compose": "5.13.0",
