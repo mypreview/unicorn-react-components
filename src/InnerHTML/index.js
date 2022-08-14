@@ -16,6 +16,7 @@ import { createElement } from '@wordpress/element';
 /**
  * Component used as equivalent of Fragment with unescaped HTML, in cases where
  * it is desirable to render dangerous HTML without needing a wrapper element.
+ *
  * To preserve additional props, a `div` wrapper _will_ be created if any props
  * aside from `children` are passed.
  *

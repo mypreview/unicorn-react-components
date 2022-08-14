@@ -26,7 +26,7 @@ import { componentClassName } from '../utils';
  * A wrapper component around the "Button" component provided by the core.
  *
  * This component has been created to represent adding items into a list
- * with consideration for ease of styling and following D.R.Y principles.
+ * with consideration for ease of styling and following D.R.Y principle.
  *
  * @function
  * @since 	   1.2.0

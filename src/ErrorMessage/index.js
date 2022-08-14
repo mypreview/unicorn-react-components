@@ -21,7 +21,7 @@ import { ifCondition } from '@wordpress/compose';
 import { componentClassName } from '../utils';
 
 /**
- * A wrapper around the WordPress Notice component
+ * A wrapper around the WordPress "Notice" component
  * to allow displaying error messages when appropriate.
  *
  * @function
