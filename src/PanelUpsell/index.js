@@ -51,7 +51,7 @@ function PanelUpsell( { pluginSlug, withDonate, withHireMe, withRate, ...otherPr
 					<p>
 						<strong>{ __( 'Need help customizing this plugin?' ) }</strong>
 						{ __( 'Get free of charge advice on what could be done or how complex different approaches are.' ) }
-						<ExternalLink href="https:://mahdiyazdani.com">{ __( 'Start a consultation' ) }</ExternalLink>
+						<ExternalLink href="https://mahdiyazdani.com">{ __( 'Start a consultation' ) }</ExternalLink>
 					</p>
 					<HorizontalRule />
 				</>
