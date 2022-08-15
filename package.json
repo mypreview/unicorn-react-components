@@ -1,6 +1,6 @@
 {
 	"name": "@mypreview/unicorn-react-components",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"description": "A collection of most used React components crafted for WordPress projects.",
 	"keywords": [
 		"gutenberg",
@@ -50,6 +50,9 @@
 		]
 	},
 	"dependencies": {
+		"@emotion/babel-plugin-jsx-pragmatic": "0.2.0",
+		"@emotion/babel-preset-css-prop": "11.10.0",
+		"@emotion/react": "11.10.0",
 		"@mypreview/unicorn-js-utils": "1.1.0",
 		"@mypreview/unicorn-react-hooks": "1.0.2",
 		"@wordpress/block-editor": "9.7.0",
