@@ -25,14 +25,13 @@ import { __ } from '@wordpress/i18n';
  */
 import { usePrepareOnChange } from './hooks';
 import { AddButton, RemoveButton, Sortable } from '../';
-import { componentClassName } from '../utils';
 
 /**
  * The "HtmlAttrs" component allows creating a set of HTML attributes
  * to be added to the wrapper tag of another block instance.
  *
  * @function
- * @since 	   1.2.0
+ * @since 	   1.2.1
  * @param      {Object}         props                    		Component properties.
  * @param      {string}         props.instanceId         		Reference to the Component to render.
  * @param      {Function}       props.onChange 	        		Whether the query items are being fetched at the moment.
@@ -59,9 +58,13 @@ function HtmlAttrs( { instanceId, onChange, otherAddButtonProps, otherNameProps,
 			<Sortable
 				css={ {
 					'> div': {
+						alignItems: 'flex-end',
+						marginLeft: -5,
 						marginTop: 20,
+						'&:first-of-type': {
+							marginTop: 0,
+						},
 					},
-					[ `.${ componentClassName( 'sortable__item' ) }` ]: { alignItems: 'flex-end' },
 				} }
 				onChange={ handleOnSortEnd }
 				{ ...otherProps }
@@ -84,17 +87,16 @@ function HtmlAttrs( { instanceId, onChange, otherAddButtonProps, otherNameProps,
 							value={ attribute?.value || '' }
 							{ ...otherValueProps }
 						/>
-						{ gt( attributes.length, 1 ) && (
-							<RemoveButton
-								css={ { '.components-button&': { marginTop: 24, marginLeft: 8 } } }
-								onClick={ () => handleOnClickRemove( index ) }
-								{ ...otherRemoveButtonProps }
-							/>
-						) }
+						<RemoveButton
+							css={ { '.components-button&': { height: 30, marginTop: 24, marginLeft: 8, minWidth: 30, width: 30 } } }
+							doRender={ gt( attributes.length, 1 ) }
+							onClick={ () => handleOnClickRemove( index ) }
+							{ ...otherRemoveButtonProps }
+						/>
 					</Flex>
 				) ) }
 			</Sortable>
-			<AddButton css={ { marginTop: 22 } } onClick={ handleOnClickAdd } text={ __( 'Add attribute' ) } { ...otherAddButtonProps } />
+			<AddButton css={ { marginTop: 22 } } doRender onClick={ handleOnClickAdd } text={ __( 'Add attribute' ) } { ...otherAddButtonProps } />
 		</>
 	);
 }
