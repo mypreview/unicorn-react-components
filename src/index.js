@@ -7,7 +7,6 @@ export { default as InnerHTML } from './InnerHTML';
 export { default as Loading } from './Loading';
 export { default as Media } from './Media';
 export { default as NotFound } from './NotFound';
-export { default as PanelUpsell } from './PanelUpsell';
 export { default as Query } from './Query';
 export { default as QueryControls } from './QueryControls';
 export { default as RemoveButton } from './RemoveButton';
