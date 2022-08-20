@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset='utf-8'>
-  <title>@mypreview/unicorn-react-components 1.2.1 | Documentation</title>
+  <title>@mypreview/unicorn-react-components 1.3.0 | Documentation</title>
   <meta name='description' content='A collection of most used React components crafted for WordPress projects.'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' rel='stylesheet'>
@@ -15,7 +15,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>@mypreview/unicorn-react-components</h3>
-          <div class='mb1'><code>1.2.1</code></div>
+          <div class='mb1'><code>1.3.0</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -62,6 +62,16 @@
                   href='#errormessage'
                   class="">
                   ErrorMessage
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#emailcontrol'
+                  class="">
+                  EmailControl
                   
                 </a>
                 
@@ -187,7 +197,7 @@
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/f40ba97c6fabe0fd9796b827000a752f320666d7/src/AddButton/index.js#L41-L47'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/b97807535ca07d88b3cf1ba67efb7f4945ba29ce/src/AddButton/index.js#L41-L47'>
       <span>src/AddButton/index.js</span>
       </a>
     
@@ -313,7 +323,7 @@ with consideration for ease of styling and following D.R.Y principle.</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/f40ba97c6fabe0fd9796b827000a752f320666d7/src/ConditionalWrap/index.js#L38-L40'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/b97807535ca07d88b3cf1ba67efb7f4945ba29ce/src/ConditionalWrap/index.js#L38-L40'>
       <span>src/ConditionalWrap/index.js</span>
       </a>
     
@@ -447,7 +457,7 @@ wrap={ <span class="hljs-function">(<span class="hljs-params"> children </span>)
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/f40ba97c6fabe0fd9796b827000a752f320666d7/src/EditableText/index.js#L51-L71'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/b97807535ca07d88b3cf1ba67efb7f4945ba29ce/src/EditableText/index.js#L51-L71'>
       <span>src/EditableText/index.js</span>
       </a>
     
@@ -608,7 +618,7 @@ linked, or use other formatting.</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/f40ba97c6fabe0fd9796b827000a752f320666d7/src/ErrorMessage/index.js#L38-L44'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/b97807535ca07d88b3cf1ba67efb7f4945ba29ce/src/ErrorMessage/index.js#L38-L44'>
       <span>src/ErrorMessage/index.js</span>
       </a>
     
@@ -721,12 +731,183 @@ to allow displaying error messages when appropriate.</p>
   
   <div class='clearfix'>
     
+    <h3 class='fl m0' id='emailcontrol'>
+      EmailControl
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/b97807535ca07d88b3cf1ba67efb7f4945ba29ce/src/EmailControl/index.js#L48-L89'>
+      <span>src/EmailControl/index.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Email text-input component that lets users input a number of email addresses
+and provides a layer of validation against any possible invalid data entered.</p>
+
+    <div class='pre p1 fill-light mt0'>EmailControl(props: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): JSX.Element</div>
+  
+  
+
+  
+  
+  
+  
+  
+  <div>Since: 1.3.0</div>
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>props</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    Component properties.
+
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.help</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>A small help text displayed below the input field.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.label</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>Label property as the content.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.onChange</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>
+  </td>
+  <td class='break-word'><span>A callback function invoked when any of the values change.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.otherErrorMessageProps</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>
+  </td>
+  <td class='break-word'><span>Additional properties passed to the "TextControl" component.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.otherTextControlProps</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>
+  </td>
+  <td class='break-word'><span>Additional properties passed to the "ErrorMessage" component.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.placeholder</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>Text shown as a hint to the user as to what kind of information is expected.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.value</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>The current value of the input.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.withError</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+  </td>
+  <td class='break-word'><span>Whether to output validation error message below the field.
+</span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>JSX.Element</code>:
+        Component to render.
+
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>&lt;EmailControl onChange={ <span class="hljs-function">(<span class="hljs-params"> value </span>) =&gt;</span> onChange( { <span class="hljs-attr">to</span>: value } ) } /&gt;</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
     <h3 class='fl m0' id='htmlattrs'>
       HtmlAttrs
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/f40ba97c6fabe0fd9796b827000a752f320666d7/src/HtmlAttrs/index.js#L48-L102'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/b97807535ca07d88b3cf1ba67efb7f4945ba29ce/src/HtmlAttrs/index.js#L48-L102'>
       <span>src/HtmlAttrs/index.js</span>
       </a>
     
@@ -745,7 +926,7 @@ to be added to the wrapper tag of another block instance.</p>
   
   
   
-  <div>Since: 1.2.1</div>
+  <div>Since: 1.2.2</div>
 
   
     <div class='py1 quiet mt1 prose-big'>Parameters</div>
@@ -783,7 +964,7 @@ to be added to the wrapper tag of another block instance.</p>
                 <tr>
   <td class='break-word'><span class='code bold'>props.onChange</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>
   </td>
-  <td class='break-word'><span>Whether the query items are being fetched at the moment.
+  <td class='break-word'><span>A callback function invoked when any of the values change.
 </span></td>
 </tr>
 
@@ -896,7 +1077,7 @@ to be added to the wrapper tag of another block instance.</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/f40ba97c6fabe0fd9796b827000a752f320666d7/src/InnerHTML/index.js#L34-L41'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/b97807535ca07d88b3cf1ba67efb7f4945ba29ce/src/InnerHTML/index.js#L34-L41'>
       <span>src/InnerHTML/index.js</span>
       </a>
     
@@ -1024,7 +1205,7 @@ aside from <code>children</code> are passed.</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/f40ba97c6fabe0fd9796b827000a752f320666d7/src/Loading/index.js#L34-L43'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/b97807535ca07d88b3cf1ba67efb7f4945ba29ce/src/Loading/index.js#L34-L43'>
       <span>src/Loading/index.js</span>
       </a>
     
@@ -1139,7 +1320,7 @@ aside from <code>children</code> are passed.</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/f40ba97c6fabe0fd9796b827000a752f320666d7/src/Media/index.js#L46-L67'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/b97807535ca07d88b3cf1ba67efb7f4945ba29ce/src/Media/index.js#L46-L67'>
       <span>src/Media/index.js</span>
       </a>
     
@@ -1296,7 +1477,7 @@ on the media type being stored within the block attributes.</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/f40ba97c6fabe0fd9796b827000a752f320666d7/src/NotFound/index.js#L38-L44'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/b97807535ca07d88b3cf1ba67efb7f4945ba29ce/src/NotFound/index.js#L38-L44'>
       <span>src/NotFound/index.js</span>
       </a>
     
@@ -1422,7 +1603,7 @@ on the media type being stored within the block attributes.</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/f40ba97c6fabe0fd9796b827000a752f320666d7/src/Query/index.js#L45-L47'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/b97807535ca07d88b3cf1ba67efb7f4945ba29ce/src/Query/index.js#L45-L47'>
       <span>src/Query/index.js</span>
       </a>
     
@@ -1580,7 +1761,7 @@ on the media type being stored within the block attributes.</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/f40ba97c6fabe0fd9796b827000a752f320666d7/src/TermsTreeSelect/index.js#L42-L68'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/b97807535ca07d88b3cf1ba67efb7f4945ba29ce/src/TermsTreeSelect/index.js#L42-L68'>
       <span>src/TermsTreeSelect/index.js</span>
       </a>
     
@@ -1737,7 +1918,7 @@ interface to select the parent page/term in a hierarchy of pages/terms.</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/f40ba97c6fabe0fd9796b827000a752f320666d7/src/QueryControls/index.js#L58-L115'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/b97807535ca07d88b3cf1ba67efb7f4945ba29ce/src/QueryControls/index.js#L58-L115'>
       <span>src/QueryControls/index.js</span>
       </a>
     
@@ -1969,7 +2150,7 @@ onOrderChange={ <span class="hljs-function">(<span class="hljs-params"> value </
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/f40ba97c6fabe0fd9796b827000a752f320666d7/src/RemoveButton/index.js#L41-L56'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/b97807535ca07d88b3cf1ba67efb7f4945ba29ce/src/RemoveButton/index.js#L41-L56'>
       <span>src/RemoveButton/index.js</span>
       </a>
     
@@ -2095,7 +2276,7 @@ with consideration for ease of styling and following D.R.Y principle.</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/f40ba97c6fabe0fd9796b827000a752f320666d7/src/Sortable/index.js#L49-L73'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mypreview/unicorn-react-components/blob/b97807535ca07d88b3cf1ba67efb7f4945ba29ce/src/Sortable/index.js#L49-L73'>
       <span>src/Sortable/index.js</span>
       </a>
     
