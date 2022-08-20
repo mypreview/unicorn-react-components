@@ -5,7 +5,7 @@
  */
 import { normalizeJsonify, sanitizeSlug, stringify } from '@mypreview/unicorn-js-utils';
 import { useDidUpdate } from '@mypreview/unicorn-react-hooks';
-import { gt, map } from 'lodash';
+import { gt, map, trim } from 'lodash';
 import PropTypes from 'prop-types';
 
 /**
@@ -31,10 +31,10 @@ import { AddButton, RemoveButton, Sortable } from '../';
  * to be added to the wrapper tag of another block instance.
  *
  * @function
- * @since 	   1.2.1
+ * @since 	   1.2.2
  * @param      {Object}         props                    		Component properties.
  * @param      {string}         props.instanceId         		Reference to the Component to render.
- * @param      {Function}       props.onChange 	        		Whether the query items are being fetched at the moment.
+ * @param      {Function}       props.onChange 	        	 	A callback function invoked when any of the values change.
  * @param      {Object}    	    props.otherAddButtonProps 		Additional properties passed to the "AddButton" component.
  * @param      {Object}    	    props.otherNameProps 			Additional properties passed to the "TextInput -> Name (Key)" field.
  * @param      {Object}    	    props.otherRemoveButtonProps    Additional properties passed to the "TextInput -> Value" field.
@@ -76,7 +76,7 @@ function HtmlAttrs( { instanceId, onChange, otherAddButtonProps, otherNameProps,
 							css={ { '&': { marginBottom: '0 !important', '> div': { marginBottom: 0 } } } }
 							label={ __( 'Name' ) }
 							onChange={ ( value ) => handleOnChange( { ...attribute, name: sanitizeSlug( value ) }, index ) }
-							value={ attribute?.name || '' }
+							value={ trim( attribute?.name ) || '' }
 							{ ...otherNameProps }
 						/>
 						<TextControl
