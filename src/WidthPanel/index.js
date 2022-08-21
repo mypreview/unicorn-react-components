@@ -3,7 +3,6 @@
  *
  * @ignore
  */
-import { ifArray } from '@mypreview/unicorn-js-utils';
 import { map, isUndefined } from 'lodash';
 import PropTypes from 'prop-types';
 
@@ -35,12 +34,6 @@ import { ifCondition, useInstanceId } from '@wordpress/compose';
  */
 function WidthPanel( { ariaLabel, help, onChange, range, title, value } ) {
 	const instanceId = useInstanceId( WidthPanel );
-	const handleChange = ( newWidth ) => {
-		// Check if we are toggling the width off
-		const width = value === newWidth ? undefined : newWidth;
-		// Notify the update.
-		onChange( width );
-	};
 
 	return (
 		<PanelBody title={ title }>
@@ -51,7 +44,7 @@ function WidthPanel( { ariaLabel, help, onChange, range, title, value } ) {
 							<Button
 								isSmall
 								key={ widthValue }
-								onClick={ () => handleChange( widthValue ) }
+								onClick={ () => onChange( widthValue ) }
 								variant={ widthValue === value ? 'primary' : undefined }
 							>
 								{ widthValue }%
@@ -82,4 +75,4 @@ WidthPanel.defaultProps = {
 	value: undefined,
 };
 
-export default ifCondition( ( { range, value } ) => ! isUndefined( value ) && ifArray( range ) && Boolean( range?.length > 1 ) )( WidthPanel );
+export default ifCondition( ( { value } ) => ! isUndefined( value ) )( WidthPanel );
