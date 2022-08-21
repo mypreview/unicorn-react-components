@@ -6,7 +6,7 @@ export { default as ErrorMessage } from './ErrorMessage';
 export { default as HtmlAttrs } from './HtmlAttrs';
 export { default as Icon } from './Icon';
 export { default as InnerHTML } from './InnerHTML';
-export { default as IsRequiredToolbarButton } from './IsRequiredToolbarButton';
+export { default as IsRequiredToolbarControl } from './IsRequiredToolbarControl';
 export { default as Loading } from './Loading';
 export { default as Media } from './Media';
 export { default as NotFound } from './NotFound';
