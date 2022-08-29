@@ -15,12 +15,19 @@ import { __ } from '@wordpress/i18n';
 import { close } from '@wordpress/icons';
 
 /**
+ * Internal dependencies
+ *
+ * @ignore
+ */
+import { componentClassName } from '../utils';
+
+/**
  * Pill element with a remove button.
  * This component is typically used as the output when iterating over a collection of items that should
  * be displayed as pills/tags rather than standalone.
  *
  * @function
- * @since	   1.5.0
+ * @since	   1.5.1
  * @param	   {Object}			props 			 		  Component properties.
  * @param	   {string}			props.label 	 		  Label shown in the element.
  * @param  	   {Function}    	props.onClick    		  Callback function for processing click events on the button component.
@@ -37,6 +44,7 @@ function Pill( { label, onClick, otherButtonProps, ...otherProps } ) {
 	return (
 		<Flex
 			align="center"
+			className={ componentClassName( 'pill' ) }
 			css={ { '&': { background: '#efefef', borderRadius: 12, padding: '4px 12px', marginBottom: '8px !important', marginRight: 12 } } }
 			direction="row"
 			justify="flex-start"

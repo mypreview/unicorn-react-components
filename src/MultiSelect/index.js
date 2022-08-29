@@ -25,13 +25,14 @@ import { useEffect, useMemo, useState } from '@wordpress/element';
 import Constants from './constants';
 import { Pills } from './components';
 import { ErrorMessage } from '../';
+import { componentClassName } from '../utils';
 
 /**
  * MultiSelect component designed to provide the ability to search for and select
  * any number of options from a set of "{ label, value }" pairs in any order.
  *
  * @function
- * @since	   1.5.0
+ * @since	   1.5.1
  * @param	   {Object}		    props                  Component properties.
  * @param	   {string} 		props.help 		   	   A small help text displayed below the input field.
  * @param	   {boolean} 	    props.isClearable	   Is the select value clearable.
@@ -93,7 +94,7 @@ function MultiSelect( { help, isClearable, isSearchable, label: title, messages:
 	};
 
 	return (
-		<BaseControl help={ help } label={ title } id={ `multi-select-${ instanceId }` }>
+		<BaseControl className={ componentClassName( 'multi-select' ) } help={ help } label={ title } id={ `multi-select-${ instanceId }` }>
 			<FlexBlock css={ { paddingTop: 12 } }>
 				<p>
 					<strong>{ `${ selected.length } ${ messages.selected }` }</strong>
