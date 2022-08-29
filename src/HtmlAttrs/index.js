@@ -39,7 +39,7 @@ import { AddButton, RemoveButton, Sortable } from '../';
  * @param      {Object}    	    props.otherNameProps 			Additional properties passed to the "TextInput -> Name (Key)" field.
  * @param      {Object}    	    props.otherRemoveButtonProps    Additional properties passed to the "TextInput -> Value" field.
  * @param      {Object}    	    props.otherValueProps    		Additional properties passed to the "RemoveButton" component.
- * @param 	   {string}  	    props.value 	            	The current width of the field/element.
+ * @param 	   {string}  	    props.value 	            	The current value of the inputs.
  * @return     {JSX.Element}                                	Component to render.
  * @example
  *
@@ -84,7 +84,7 @@ function HtmlAttrs( { instanceId, onChange, otherAddButtonProps, otherNameProps,
 							css={ { '&': { marginBottom: '0 !important', '> div': { marginBottom: 0 } } } }
 							label={ __( 'Value' ) }
 							onChange={ ( value ) => handleOnChange( { ...attribute, value: escapeHTML( value ) }, index ) }
-							value={ attribute?.value || '' }
+							value={ trim( attribute?.value ) || '' }
 							{ ...otherValueProps }
 						/>
 						<RemoveButton
