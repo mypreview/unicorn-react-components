@@ -72,7 +72,7 @@ function QueryControls( {
 	taxonomy,
 } ) {
 	return (
-		<div className={ componentClassName( 'loading' ) }>
+		<div className={ componentClassName( 'query-controls' ) }>
 			{ onOrderChange && onOrderByChange && (
 				<SelectControl
 					label={ __( 'Order by' ) }
