@@ -23,13 +23,13 @@ import { __ } from '@wordpress/i18n';
  *
  * @function
  * @since 	   1.1.0
- * @param      {Object}         props              Component properties.
+ * @param      {Object}         props              	   Component properties.
  * @param 	   {string}  	    props.label      	   Label property as the content.
  * @param	   {string}		    props.noOptionLabel    Label to represent empty selection.
  * @param 	   {Function}  	    props.onChange 	       Function that receives the value of the input.
  * @param 	   {string}  	    props.taxonomy    	   Taxonomy name that the term is part of.
  * @param 	   {string}  	    props.value            Link object value for the button component.
- * @return     {JSX.Element}                       Component to render.
+ * @return     {JSX.Element}                       	   Component to render.
  * @example
  *
  * <TermsTreeSelect
