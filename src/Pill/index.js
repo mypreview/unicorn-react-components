@@ -3,6 +3,7 @@
  *
  * @ignore
  */
+import { formattedContent } from '@mypreview/unicorn-js-utils';
 import PropTypes from 'prop-types';
 
 /**
@@ -27,7 +28,7 @@ import { componentClassName } from '../utils';
  * be displayed as pills/tags rather than standalone.
  *
  * @function
- * @since	   1.5.1
+ * @since	   1.5.2
  * @param	   {Object}			props 			 		  Component properties.
  * @param	   {string}			props.label 	 		  Label shown in the element.
  * @param  	   {Function}    	props.onClick    		  Callback function for processing click events on the button component.
@@ -51,9 +52,7 @@ function Pill( { label, onClick, otherButtonProps, ...otherProps } ) {
 			wrap
 			{ ...otherProps }
 		>
-			<FlexItem css={ { marginTop: 4, marginBottom: '4px !important' } } aria-hidden>
-				{ label }
-			</FlexItem>
+			<FlexItem css={ { marginTop: 4, marginBottom: '4px !important' } }>{ formattedContent( label ) }</FlexItem>
 			{ onClick && (
 				<FlexItem css={ { margin: '0 !important' } }>
 					<Button
