@@ -37,9 +37,9 @@ import { Sortable, Pill } from '../../';
  * @example
  *
  * <Pills
- * 		onRemove={ handleOnClickSelectedOptionTag }
- * 		onSort={ onChange }
- * 		value={ selectedOptions }
+ *    onRemove={ handleOnClickSelectedOptionTag }
+ *    onSort={ onChange }
+ *    value={ selectedOptions }
  * 	/>
  */
 function Pills( { onRemove, onSort, value: items, ...otherProps } ) {

@@ -37,8 +37,8 @@ import { componentClassName } from '../utils';
  * @example
  *
  * <Pill
- *     label={ label }
- *     onClick={ handleOnClickPill }
+ *    label={ label }
+ *    onClick={ handleOnClickPill }
  * />
  */
 function Pill( { label, onClick, otherButtonProps, ...otherProps } ) {

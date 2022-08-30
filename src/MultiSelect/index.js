@@ -47,9 +47,9 @@ import { componentClassName } from '../utils';
  * @example
  *
  * <MultiSelect
- * 		options={ [ { value: 100, label: 'My blog post' }, { value: 108, label: 'My other blog post' } ] }
- * 		onChange={ ( value ) => { setAttributes( { ids: value } ); } }
- * 		value={ ids }
+ *    options={ [ { value: 100, label: 'My blog post' }, { value: 108, label: 'My other blog post' } ] }
+ *    onChange={ ( value ) => { setAttributes( { ids: value } ); } }
+ *    value={ ids }
  * />
  *
  * // => Array [ 100, 108 ]
