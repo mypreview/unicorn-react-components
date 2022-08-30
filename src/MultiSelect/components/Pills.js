@@ -28,7 +28,7 @@ import { Sortable, Pill } from '../../';
  *
  * @private
  * @function
- * @since	   1.5.0
+ * @since	   1.5.2
  * @param	   {Object}			props 			  Component properties.
  * @param	   {Function}		props.onRemove    Callback function to trigger when the remove button in a tag is clicked.
  * @param	   {Function}		props.onSort	  Callback function to be triggered when the user finishes a sorting gesture.
@@ -42,7 +42,7 @@ import { Sortable, Pill } from '../../';
  * 		value={ selectedOptions }
  * 	/>
  */
-function Pills( { onRemove, onSort, value: items } ) {
+function Pills( { onRemove, onSort, value: items, ...otherProps } ) {
 	const handleOnChange = useCallback( ( newItems ) => {
 		onSort( map( newItems, ( { props: { value } } ) => value ) );
 	}, [] );
@@ -63,6 +63,7 @@ function Pills( { onRemove, onSort, value: items } ) {
 			} }
 			onChange={ handleOnChange }
 			withSortableKnob={ false }
+			{ ...otherProps }
 		>
 			{ map( items, ( { value, label }, index ) => (
 				<Pill key={ value } label={ label } onClick={ () => onRemove( index ) } value={ value } />
