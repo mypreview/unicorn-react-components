@@ -41,8 +41,8 @@ import { componentClassName } from '../utils';
  * @param	   {Object} 		props.messages 		   Labels and notices for subcomponents. Merges user defined values into defaults.
  * @param	   {Function}	    props.onChange 		   Callback function to be triggered when the selected options change.
  * @param	   {Array}		    props.options 		   Set of "{ label, value }" pairs that can be selected.
- * @param	   {boolean} 	    props.withSelectAll    Enable "Select All" checkbox option.
  * @param	   {Array}		    props.value    		   List of values of the options that are currently selected.
+ * @param	   {boolean} 	    props.withSelectAll    Enable "Select All" checkbox option.
  * @return     {JSX.Element}     					   Component to render.
  * @example
  *
@@ -54,7 +54,7 @@ import { componentClassName } from '../utils';
  *
  * // => Array [ 100, 108 ]
  */
-function MultiSelect( { help, isClearable, isSearchable, label: title, messages: _messages, onChange, options, withSelectAll, value: selectedOptions } ) {
+function MultiSelect( { help, isClearable, isSearchable, label: title, messages: _messages, onChange, options, value: selectedOptions, withSelectAll } ) {
 	const [ selected, setSelected ] = useState( [] );
 	const instanceId = useInstanceId( MultiSelect );
 	const [ searchText, setSearchText ] = useInputValue( '' );
@@ -172,8 +172,8 @@ MultiSelect.propTypes = {
 	options: PropTypes.arrayOf(
 		PropTypes.shape( { label: PropTypes.string, value: PropTypes.oneOfType( [ PropTypes.number, PropTypes.object, PropTypes.string ] ) } )
 	),
-	withSelectAll: PropTypes.bool,
 	value: PropTypes.array,
+	withSelectAll: PropTypes.bool,
 };
 
 MultiSelect.defaultProps = {
@@ -184,8 +184,8 @@ MultiSelect.defaultProps = {
 	messages: {},
 	onChange: () => {},
 	options: [],
-	withSelectAll: true,
 	value: [],
+	withSelectAll: true,
 };
 
 export default MultiSelect;
