@@ -1,5 +1,7 @@
 /**
  * Utility for libraries from the `Lodash`.
+ *
+ * @ignore
  */
 import { ifArray, pickRelevantMediaFiles } from '@mypreview/unicorn-js-utils';
 import { every, map, merge } from 'lodash';
@@ -7,6 +9,8 @@ import PropTypes from 'prop-types';
 
 /**
  * WordPress dependencies
+ *
+ * @ignore
  */
 import { isBlobURL } from '@wordpress/blob';
 import { BlockControls, BlockIcon, MediaPlaceholder, MediaUpload, MediaUploadCheck } from '@wordpress/block-editor';
@@ -18,6 +22,8 @@ import { edit as editIcon, gallery as galleryIcon } from '@wordpress/icons';
 
 /**
  * Internal dependencies
+ *
+ * @ignore
  */
 import Constants from './constants';
 import { Constants as UtilsConstants } from '../utils';
