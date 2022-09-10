@@ -26,7 +26,7 @@ import Constants from './constants';
  * A Boolean attribute indicating that an option with a non-empty string value must be entered/selected.
  *
  * @function
- * @since 	   1.4.0
+ * @since 	   1.4.1
  * @param      {Object}         props            Component properties.
  * @param      {string}         props.group      Block toolbar group name.
  * @param      {string}         props.label      Label property as the tooltip.
@@ -40,7 +40,7 @@ import Constants from './constants';
 function IsRequiredToolbarControl( { group, label, onClick, value } ) {
 	return (
 		<BlockControls group={ group }>
-			<ToolbarGroup>
+			<ToolbarGroup css={ { '&': { paddingLeft: '0 !important', paddingRight: '0 !important' } } }>
 				<ToolbarButton icon={ <Icon stroke="currentColor" d={ Constants.D } /> } isActive={ Boolean( value ) } label={ label } onClick={ onClick } />
 			</ToolbarGroup>
 		</BlockControls>
