@@ -3,7 +3,7 @@
  *
  * @ignore
  */
-import { map, isUndefined } from 'lodash';
+import map from 'lodash/map';
 import PropTypes from 'prop-types';
 
 /**
@@ -12,14 +12,21 @@ import PropTypes from 'prop-types';
  * @ignore
  */
 import { BaseControl, Button, ButtonGroup, PanelBody } from '@wordpress/components';
-import { ifCondition, useInstanceId } from '@wordpress/compose';
+import { useInstanceId } from '@wordpress/compose';
+
+/**
+ * Internal dependencies
+ *
+ * @ignore
+ */
+import { componentClassName } from '../utils';
 
 /**
  * A group component that creates a list of "Width" options to choose from.
  * It can also coordinate the checked state of multiple Button components.
  *
  * @function
- * @since 	   1.4.0
+ * @since 	   1.6.2
  * @param      {Object}         props              Component properties.
  * @param      {string}         props.ariaLabel    A string value that labels the "ButtonGroup" interactive component.
  * @param      {string}         props.help         A help text will be generated using help property as the content.
@@ -34,17 +41,23 @@ import { ifCondition, useInstanceId } from '@wordpress/compose';
  */
 function WidthPanel( { ariaLabel, help, onChange, range, title, value } ) {
 	const instanceId = useInstanceId( WidthPanel );
+	const handleChange = ( newWidth ) => {
+		// Check if we are toggling the width off.
+		const width = value === newWidth ? undefined : newWidth;
+		// Update attributes.
+		onChange( width );
+	};
 
 	return (
 		<PanelBody title={ title }>
-			<BaseControl help={ help } id={ `width-panel-${ instanceId }` }>
+			<BaseControl className={ componentClassName( 'width-panel' ) } help={ help } id={ `width-panel-${ instanceId }` }>
 				<ButtonGroup aria-label={ ariaLabel }>
 					{ map( range, ( widthValue ) => {
 						return (
 							<Button
 								isSmall
 								key={ widthValue }
-								onClick={ () => onChange( widthValue ) }
+								onClick={ () => handleChange( widthValue ) }
 								variant={ widthValue === value ? 'primary' : undefined }
 							>
 								{ widthValue }%
@@ -75,4 +88,4 @@ WidthPanel.defaultProps = {
 	value: undefined,
 };
 
-export default ifCondition( ( { value } ) => ! isUndefined( value ) )( WidthPanel );
+export default WidthPanel;
