@@ -14,7 +14,7 @@ import PropTypes from 'prop-types';
  * @ignore
  */
 import { BaseControl, Button, CheckboxControl, FlexBlock, TextControl } from '@wordpress/components';
-import { useInstanceId } from '@wordpress/compose';
+import { withInstanceId } from '@wordpress/compose';
 import { useEffect, useMemo, useState } from '@wordpress/element';
 
 /**
@@ -35,6 +35,7 @@ import { componentClassName } from '../utils';
  * @since	   1.5.1
  * @param	   {Object}		    props                  Component properties.
  * @param	   {string} 		props.help 		   	   A small help text displayed below the input field.
+ * @param      {string}         props.instanceId       A unique id for each instance of this component.
  * @param	   {boolean} 	    props.isClearable	   Is the select value clearable.
  * @param	   {boolean} 	    props.isSearchable	   Whether to enable search functionality.
  * @param	   {string} 		props.label 		   Label property as the content.
@@ -54,9 +55,19 @@ import { componentClassName } from '../utils';
  *
  * // => Array [ 100, 108 ]
  */
-function MultiSelect( { help, isClearable, isSearchable, label: title, messages: _messages, onChange, options, value: selectedOptions, withSelectAll } ) {
+function MultiSelect( {
+	help,
+	instanceId,
+	isClearable,
+	isSearchable,
+	label: title,
+	messages: _messages,
+	onChange,
+	options,
+	value: selectedOptions,
+	withSelectAll,
+} ) {
 	const [ selected, setSelected ] = useState( [] );
-	const instanceId = useInstanceId( MultiSelect );
 	const [ searchText, setSearchText ] = useInputValue( '' );
 	const messages = merge( {}, Constants.MESSAGES, _messages );
 
@@ -158,6 +169,7 @@ function MultiSelect( { help, isClearable, isSearchable, label: title, messages:
 
 MultiSelect.propTypes = {
 	help: PropTypes.string,
+	instanceId: PropTypes.string,
 	isClearable: PropTypes.bool,
 	isSearchable: PropTypes.bool,
 	label: PropTypes.string,
@@ -178,6 +190,7 @@ MultiSelect.propTypes = {
 
 MultiSelect.defaultProps = {
 	help: undefined,
+	instanceId: undefined,
 	isClearable: true,
 	isSearchable: true,
 	label: undefined,
@@ -188,4 +201,4 @@ MultiSelect.defaultProps = {
 	withSelectAll: true,
 };
 
-export default MultiSelect;
+export default withInstanceId( MultiSelect );

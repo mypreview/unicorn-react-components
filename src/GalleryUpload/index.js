@@ -15,7 +15,7 @@ import PropTypes from 'prop-types';
 import { isBlobURL } from '@wordpress/blob';
 import { BlockControls, BlockIcon, MediaPlaceholder, MediaUpload, MediaUploadCheck } from '@wordpress/block-editor';
 import { DropZone, FormFileUpload, ToolbarButton, ToolbarItem, ToolbarGroup, withNotices } from '@wordpress/components';
-import { useInstanceId } from '@wordpress/compose';
+import { compose, withInstanceId } from '@wordpress/compose';
 import { useDispatch } from '@wordpress/data';
 import { mediaUpload } from '@wordpress/editor';
 import { edit as editIcon, gallery as galleryIcon } from '@wordpress/icons';
@@ -35,6 +35,7 @@ import { Constants as UtilsConstants } from '../utils';
  * @function
  * @since	   1.6.0
  * @param 	   {Object}         		props    		  		 Component properties.
+ * @param      {string}         		props.instanceId         A unique id for each instance of this component.
  * @param 	   {boolean} 	       	    props.isSelected    	 Whether or not this element is currently selected.
  * @param	   {Object} 				props.messages 		     Labels and notices for subcomponents. Merges user defined values into defaults.
  * @param 	   {Object} 	       		props.noticeOperations   A number of functions to add notices to the editor.
@@ -55,8 +56,7 @@ import { Constants as UtilsConstants } from '../utils';
  *
  * // => Array [ { alt: '', caption: '', id: "21", url: 'http://dev.local/wp-content/uploads/2022/09/image.jpg' } ]
  */
-function GalleryUpload( { isSelected, messages: _messages, noticeOperations, noticeUI, onChange, sizeSlug, value: images, withFileUpload } ) {
-	const instanceId = useInstanceId( GalleryUpload );
+function GalleryUpload( { instanceId, isSelected, messages: _messages, noticeOperations, noticeUI, onChange, sizeSlug, value: images, withFileUpload } ) {
 	const { lockPostSaving, unlockPostSaving } = useDispatch( 'core/editor' );
 	const messages = merge( {}, Constants.MESSAGES, _messages );
 	const returnMappedImages = ( media ) => map( media, ( image ) => pickRelevantMediaFiles( image, sizeSlug ) );
@@ -151,6 +151,7 @@ function GalleryUpload( { isSelected, messages: _messages, noticeOperations, not
 }
 
 GalleryUpload.propTypes = {
+	instanceId: PropTypes.string,
 	isSelected: PropTypes.bool,
 	messages: PropTypes.exact( {
 		edit: PropTypes.string,
@@ -177,6 +178,7 @@ GalleryUpload.propTypes = {
 };
 
 GalleryUpload.defaultProps = {
+	instanceId: undefined,
 	isSelected: false,
 	messages: {},
 	noticeOperations: () => {},
@@ -187,4 +189,4 @@ GalleryUpload.defaultProps = {
 	withFileUpload: true,
 };
 
-export default withNotices( GalleryUpload );
+export default compose( withInstanceId, withNotices )( GalleryUpload );
