@@ -33,13 +33,13 @@ import { AddButton, RemoveButton, Sortable } from '../';
  * @function
  * @since 	   1.2.2
  * @param      {Object}         props                    		Component properties.
- * @param      {string}         props.instanceId         		Reference to the Component to render.
+ * @param      {string}         props.instanceId         		A unique id for each instance of this component.
  * @param      {Function}       props.onChange 	        	 	A callback function invoked when any of the values change.
  * @param      {Object}    	    props.otherAddButtonProps 		Additional properties passed to the "AddButton" component.
  * @param      {Object}    	    props.otherNameProps 			Additional properties passed to the "TextInput -> Name (Key)" field.
  * @param      {Object}    	    props.otherRemoveButtonProps    Additional properties passed to the "TextInput -> Value" field.
  * @param      {Object}    	    props.otherValueProps    		Additional properties passed to the "RemoveButton" component.
- * @param 	   {string}  	    props.value 	            	The current value of the inputs.
+ * @param 	   {string}  	    props.value 	            	A JSON string formatted of the current value of inputs.
  * @return     {JSX.Element}                                	Component to render.
  * @example
  *
@@ -108,7 +108,7 @@ HtmlAttrs.propTypes = {
 	otherNameProps: PropTypes.object,
 	otherRemoveButtonProps: PropTypes.object,
 	otherValueProps: PropTypes.object,
-	value: PropTypes.number,
+	value: PropTypes.string,
 };
 
 HtmlAttrs.defaultProps = {
