@@ -1,5 +1,6 @@
 export { default as AddButton } from './AddButton';
 export { default as ConditionalWrap } from './ConditionalWrap';
+export { default as Disabled } from './Disabled';
 export { default as EditableText } from './EditableText';
 export { default as EmailControl } from './EmailControl';
 export { default as ErrorMessage } from './ErrorMessage';
