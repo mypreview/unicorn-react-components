@@ -13,7 +13,7 @@ import PropTypes from 'prop-types';
  */
 import { Button, Flex, FlexItem } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
-import { close } from '@wordpress/icons';
+import { cancelCircleFilled } from '@wordpress/icons';
 
 /**
  * Internal dependencies
@@ -28,7 +28,7 @@ import { componentClassName } from '../utils';
  * be displayed as pills/tags rather than standalone.
  *
  * @function
- * @since	   1.5.2
+ * @since	   1.7.1
  * @param	   {Object}			props 			 		  Component properties.
  * @param	   {string}			props.label 	 		  Label shown in the element.
  * @param  	   {Function}    	props.onClick    		  Callback function for processing click events on the button component.
@@ -46,27 +46,29 @@ function Pill( { label, onClick, otherButtonProps, ...otherProps } ) {
 		<Flex
 			align="center"
 			className={ componentClassName( 'pill' ) }
-			css={ { '&': { background: '#efefef', borderRadius: 12, padding: '4px 12px', marginBottom: '8px !important', marginRight: 12 } } }
+			css={ { '&': { background: '#efefef', borderRadius: 12, color: '#757575', padding: '0 8px', margin: '0 !important', overflow: 'hidden' } } }
 			direction="row"
 			justify="flex-start"
 			wrap
 			{ ...otherProps }
 		>
-			<FlexItem css={ { marginTop: 4, marginBottom: '4px !important' } }>{ formattedContent( label ) }</FlexItem>
+			<FlexItem css={ { '&': { marginBottom: '0 !important', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' } } }>
+				{ formattedContent( label ) }
+			</FlexItem>
 			{ onClick && (
-				<FlexItem css={ { margin: '0 !important' } }>
+				<FlexItem css={ { lineHeight: 1, margin: '0 !important' } }>
 					<Button
 						css={ {
 							'&': {
+								color: 'inherit !important',
 								padding: '0 !important',
-								minWidth: 'unset',
-								width: 'auto !important',
+								minWidth: 'unset !important',
 							},
 						} }
 						isLink
 						isSmall
-						icon={ close }
-						iconSize={ 18 }
+						icon={ cancelCircleFilled }
+						iconSize={ 20 }
 						label={ __( 'Remove' ) }
 						onClick={ onClick }
 						showTooltip
