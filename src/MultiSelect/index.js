@@ -32,7 +32,7 @@ import { componentClassName } from '../utils';
  * any number of options from a set of "{ label, value }" pairs in any order.
  *
  * @function
- * @since	   1.5.1
+ * @since	   1.7.1
  * @param	   {Object}		    props                  Component properties.
  * @param	   {string} 		props.help 		   	   A small help text displayed below the input field.
  * @param      {string}         props.instanceId       A unique id for each instance of this component.
@@ -105,12 +105,25 @@ function MultiSelect( {
 	};
 
 	return (
-		<BaseControl className={ componentClassName( 'multi-select' ) } help={ help } label={ title } id={ `multi-select-${ instanceId }` }>
+		<BaseControl
+			css={ { width: '100%' } }
+			className={ componentClassName( 'multi-select' ) }
+			help={ help }
+			label={ title }
+			id={ `multi-select-${ instanceId }` }
+		>
 			<FlexBlock css={ { paddingTop: 12 } }>
 				<p>
 					<strong>{ `${ selected.length } ${ messages.selected }` }</strong>
 					{ isClearable && Boolean( selected.length ) && (
-						<Button css={ { marginLeft: 12 } } isDestructive isSmall onClick={ () => onChange( [] ) } text={ messages.clear } />
+						<Button
+							css={ { marginLeft: '12px !important' } }
+							isDestructive
+							isSmall
+							onClick={ () => onChange( [] ) }
+							text={ messages.clear }
+							variant="link"
+						/>
 					) }
 				</p>
 				<Pills
@@ -133,12 +146,34 @@ function MultiSelect( {
 				) }
 				<ul
 					css={ {
+						border: '1px solid #e0e0e0',
+						boxSizing: 'border-box',
 						margin: 0,
-						padding: 4,
-						maxHeight: 300,
+						padding: 0,
+						maxHeight: '17em',
+						overflowX: 'hidden',
 						overflowY: 'scroll',
 						li: {
+							borderBlock: '.5px solid #f0f0f0',
 							listStyleType: 'none',
+							margin: 0,
+						},
+						'.components-base-control': {
+							alignItems: 'center',
+							background: '#fff',
+							color: '#757575',
+							display: 'flex',
+							marginBottom: 0,
+							padding: '12px 16px',
+						},
+						'.components-base-control__field': {
+							alignItems: 'center',
+							display: 'flex',
+							marginBottom: 0,
+							width: '100%',
+						},
+						'.components-checkbox-control__label': {
+							flexGrow: 1,
 						},
 					} }
 				>

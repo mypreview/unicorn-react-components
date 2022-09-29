@@ -28,7 +28,7 @@ import { Sortable, Pill } from '../../';
  *
  * @private
  * @function
- * @since	   1.5.2
+ * @since	   1.7.1
  * @param	   {Object}			props 			  Component properties.
  * @param	   {Function}		props.onRemove    Callback function to trigger when the remove button in a tag is clicked.
  * @param	   {Function}		props.onSort	  Callback function to be triggered when the user finishes a sorting gesture.
@@ -51,13 +51,17 @@ function Pills( { onRemove, onSort, value: items, ...otherProps } ) {
 		<Sortable
 			css={ {
 				'&': {
+					borderBottom: '1px solid #f0f0f0',
 					display: 'flex',
 					flexDirection: 'row',
 					flexWrap: 'wrap',
+					gap: 10,
 					justifyContent: 'flex-start',
-					maxHeight: 300,
+					maxHeight: '17em',
 					marginBottom: 17,
 					marginTop: 17,
+					paddingBottom: 17,
+					overflowX: 'hidden',
 					overflowY: 'scroll',
 				},
 			} }

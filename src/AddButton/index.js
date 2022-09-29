@@ -40,7 +40,7 @@ import { componentClassName } from '../utils';
  */
 function AddButton( { children, onClick, ...otherProps } ) {
 	return (
-		<Button className={ componentClassName( 'add-button' ) } icon={ plus } isSecondary label={ __( 'Add' ) } onClick={ onClick } { ...otherProps }>
+		<Button className={ componentClassName( 'add-button' ) } icon={ plus } label={ __( 'Add' ) } onClick={ onClick } variant="secondary" { ...otherProps }>
 			{ children }
 		</Button>
 	);

@@ -56,7 +56,13 @@ function Sortable( { children, instanceId, onChange, withSortableKnob, ...otherP
 		<SortableList className={ componentClassName( 'sortable' ) } onSortEnd={ handleOnSortEnd } { ...otherProps }>
 			{ map( children, ( item, index ) => (
 				<SortableItem key={ `${ index }-${ instanceId }` }>
-					<Flex align="center" className={ componentClassName( 'sortable__item' ) } direction="row" expanded={ false }>
+					<Flex
+						css={ { cursor: 'grab', '&:active': { cursor: 'grabbing' } } }
+						align="center"
+						className={ componentClassName( 'sortable__item' ) }
+						direction="row"
+						expanded={ false }
+					>
 						{ withSortableKnob && (
 							<SortableKnob>
 								<div className={ componentClassName( 'sortable__knob' ) }>
