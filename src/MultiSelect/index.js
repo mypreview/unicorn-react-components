@@ -109,8 +109,8 @@ function MultiSelect( {
 			css={ { width: '100%' } }
 			className={ componentClassName( 'multi-select' ) }
 			help={ help }
-			label={ title }
 			id={ `multi-select-${ instanceId }` }
+			label={ title }
 		>
 			<FlexBlock css={ { paddingTop: 12 } }>
 				<p>
