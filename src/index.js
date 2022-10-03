@@ -14,6 +14,7 @@ export { default as ListRadioSelect } from './ListRadioSelect';
 export { default as Loading } from './Loading';
 export { default as Media } from './Media';
 export { default as MultiSelect } from './MultiSelect';
+export { default as NewPostLink } from './NewPostLink';
 export { default as NotFound } from './NotFound';
 export { default as Pill } from './Pill';
 export { default as Query } from './Query';
