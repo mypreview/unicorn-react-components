@@ -25,12 +25,12 @@ import { cloneElement } from '@wordpress/element';
  * @example
  *
  * <ConditionalWrap
- *	condition={ !! tooltip }
- *	wrap={ ( children ) => (
- *		<Tooltip position="bottom" title={ tooltip }>
- * 			{ children }
- *		</Tooltip>
- *	) }
+ *     condition={ !! tooltip }
+ *     wrap={ ( children ) => (
+ *          <Tooltip position="bottom" title={ tooltip }>
+ *               { children }
+ *          </Tooltip>
+ *     ) }
  * >
  *     <button>{ children }</button>
  * </ConditionalWrap>

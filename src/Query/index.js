@@ -34,12 +34,12 @@ import { Loading, NotFound } from '../';
  * @example
  *
  * <Query
- *    className={ className }
- *    Component={ Loop }
- *    doRender
- *    havePosts={ havePosts }
- *    isLoading={ isLoading }
- *    query={ slicedQuery }
+ *     className={ className }
+ *     Component={ Loop }
+ *     doRender
+ *     havePosts={ havePosts }
+ *     isLoading={ isLoading }
+ *     query={ slicedQuery }
  * />
  */
 function Query( { Component, havePosts, isLoading, otherLoadingProps, otherNotFoundProps, ...otherProps } ) {

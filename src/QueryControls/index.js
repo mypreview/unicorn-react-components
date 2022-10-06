@@ -46,13 +46,13 @@ import Constants from './constants';
  * @example
  *
  * <QueryControls
- *	maxItems={ maxLimit }
- *	numberOfItems={ limit }
- *	order={ order }
- *	orderBy={ orderby }
- *	onNumberOfItemsChange={ ( value ) => setAttributes( { limit: value } ) }
- *	onOrderByChange={ ( value ) => setAttributes( { orderby: value } ) }
- *	onOrderChange={ ( value ) => setAttributes( { order: value } ) }
+ *     maxItems={ maxLimit }
+ *     numberOfItems={ limit }
+ *     order={ order }
+ *     orderBy={ orderby }
+ *     onNumberOfItemsChange={ ( value ) => setAttributes( { limit: value } ) }
+ *     onOrderByChange={ ( value ) => setAttributes( { orderby: value } ) }
+ *     onOrderChange={ ( value ) => setAttributes( { order: value } ) }
  * />
  */
 function QueryControls( {

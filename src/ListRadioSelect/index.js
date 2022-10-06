@@ -42,10 +42,10 @@ import { componentClassName } from '../utils';
  * @example
  *
  * <ListRadioSelect
- * 	  isLoading={ isLoading }
- *    onChange={ ( postId ) => setAttributes( { postId } ) }
- *    options={ [ { value: 100, label: 'My blog post' }, { value: 108, label: 'My other blog post' } ] }
- *    value={ "100" }
+ *     isLoading={ isLoading }
+ *     onChange={ ( postId ) => setAttributes( { postId } ) }
+ *     options={ [ { value: 100, label: 'My blog post' }, { value: 108, label: 'My other blog post' } ] }
+ *     value={ "100" }
  * />
  *
  * // => String "100"

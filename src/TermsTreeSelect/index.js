@@ -33,10 +33,10 @@ import { __ } from '@wordpress/i18n';
  * @example
  *
  * <TermsTreeSelect
- *    label={ { __( 'Category' ) } }
- *	  onChange={ ( value ) => setAttributes( { categories: value } ) }
- *	  taxonomy={ 'categories' }
- *    value={ '12' }
+ *     label={ { __( 'Category' ) } }
+ *     onChange={ ( value ) => setAttributes( { categories: value } ) }
+ *     taxonomy={ 'categories' }
+ *     value={ '12' }
  * />
  */
 function TermsTreeSelect( { label, noOptionLabel, onChange, taxonomy, value, ...otherProps } ) {

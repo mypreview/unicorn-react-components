@@ -40,12 +40,12 @@ import { Constants } from '../utils';
  * @example
  *
  * <EditableText
- *    className={ `${ className }__title` }
- *	  doRender={ elements?.title }
- *	  onChange={ ( value ) => setAttributes( { title: value } ) }
- *	  placeholder={ __( 'Title…' ) }
- *    tagName="h3"
- *	  value={ title }
+ *     className={ `${ className }__title` }
+ *     doRender={ elements?.title }
+ *     onChange={ ( value ) => setAttributes( { title: value } ) }
+ *     placeholder={ __( 'Title…' ) }
+ *     tagName="h3"
+ *     value={ title }
  * />
  */
 function EditableText( { className, isSave, onChange, onFocus, value, ...otherProps } ) {

@@ -48,10 +48,10 @@ import { Constants as UtilsConstants } from '../utils';
  * @example
  *
  * <GalleryUpload
- *    isSelected={ isSelected }
- *    onChange={ ( value ) => { setAttributes( { images: value } ); } }
- *    sizeSlug="large"
- *    value={ images }
+ *     isSelected={ isSelected }
+ *     onChange={ ( value ) => { setAttributes( { images: value } ); } }
+ *     sizeSlug="large"
+ *     value={ images }
  * />
  *
  * // => Array [ { alt: '', caption: '', id: "21", url: 'http://dev.local/wp-content/uploads/2022/09/image.jpg' } ]

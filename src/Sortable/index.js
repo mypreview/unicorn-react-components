@@ -42,8 +42,8 @@ import { componentClassName } from '../utils';
  *     onChange={ ( value ) => setAttributes( { items: value } ) }
  * >
  *     { map( items, ( { value, label }, index ) => (
- *         <Element key={ value } label={ label } value={ value } onRemove={ () => onRemove( index ) } />
- *	   ) ) }
+ *          <Element key={ value } label={ label } value={ value } onRemove={ () => onRemove( index ) } />
+ *     ) ) }
  * </Sortable>
  */
 function Sortable( { children, instanceId, onChange, withSortableKnob, ...otherProps } ) {

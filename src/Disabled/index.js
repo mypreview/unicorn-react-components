@@ -33,7 +33,7 @@ import { componentClassName } from '../utils';
  * @example
  *
  * <Disabled tagName="li">
- *    <a href="https://www.example.com">{ children }</a>
+ *     <a href="https://www.example.com">{ children }</a>
  * </Disabled>
  */
 function Disabled( { children, tagName, ...otherProps }, ref ) {

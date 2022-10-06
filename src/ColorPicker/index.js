@@ -43,10 +43,10 @@ import { componentClassName } from '../utils';
  * @example
  *
  * <ColorPicker
- * 	  context="background"
- * 	  label={ __( 'Background' ) }
- *    onChange={ ( value ) => setAttributes( { color: value } ) }
- *    value={ "#FFFFFF" }
+ *     context="background"
+ *     label={ __( 'Background' ) }
+ *     onChange={ ( value ) => setAttributes( { color: value } ) }
+ *     value={ "#FFFFFF" }
  * />
  *
  * // => Object { color: "#ff5252", name: "Primary", slug: "primary", className: "has-background has-primary-background-color" }
