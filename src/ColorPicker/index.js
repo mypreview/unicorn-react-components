@@ -31,7 +31,7 @@ import { componentClassName } from '../utils';
  * This component renders a custom color selector, which makes it easy to create, adjust, and experiment with theme colors.
  *
  * @function
- * @since	   2.1.0
+ * @since	   2.1.1
  * @param	   {Object}		    props               Component properties.
  * @param	   {string} 		props.context 		Context/place where color is being used e.g: background, link, text.
  * @param	   {string} 		props.help 		   	A small help text displayed below the color select element.
@@ -55,6 +55,12 @@ function ColorPicker( { context, help, instanceId, label, onChange, value, ...ot
 	const { colors } = useGetEditorSettings();
 	const handleOnChange = useCallback(
 		( newValue ) => {
+			// Allow reseting any existing value when "Clear" button clicked.
+			if ( ! newValue ) {
+				onChange( '' );
+				return;
+			}
+
 			const colorObject = getColorObjectByColorValue( colors, newValue );
 			const className = classnames( {
 				[ get( Constants, [ 'classNames', context ] ) ]: context && newValue,
