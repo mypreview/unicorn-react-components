@@ -24,7 +24,7 @@ import { edit as editIcon } from '@wordpress/icons';
  * @param 	   {Object} 	    props 			 Component properties.
  * @param      {string}         props.group      Block toolbar group name.
  * @param      {Function}       props.onClick    Callback function for processing click events on the toolbar button component.
- * @param      {Function}       props.title      Toolbar button title as the tooltip.
+ * @param      {string}       	props.title      Toolbar button title as the tooltip.
  * @return     {JSX.Element}     				 Component to render.
  * @example
  *
