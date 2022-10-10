@@ -1,4 +1,5 @@
 export { default as AddButton } from './AddButton';
+export { default as AlignmentToolbarControl } from './AlignmentToolbarControl';
 export { default as ColorPicker } from './ColorPicker';
 export { default as ConditionalWrap } from './ConditionalWrap';
 export { default as Disabled } from './Disabled';
